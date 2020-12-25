@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container border shadow mt-5 p-5">
+      <h1>crud system</h1>
+      <div class="form-group">
+        <label>ProductName:</label>
+        <input type="text" id="ProductName" class="form-control" />
+        <div class="alert alert-danger d-none" id="nameAlert" role="alert">
+          <strong>please start with capital Letter</strong>
+        </div>
+
+
+
+      </div>
+      <div class="form-group">
+        <label>ProductCategory:</label>
+        <input type="text" id="ProductCategory" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>ProductPrice:</label>
+        <input type="number" id="ProductPrice" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>ProductDescription:</label>
+        <textarea id="ProductDescription" class="form-control"></textarea>
+      </div>
+      <button class="btn btn-info"  onclick=" addProduct();" id="addProduct">
+        add product
+      </button>
+    </div>
+
+    <input
+      type="text"
+      name=""
+      id="search"
+      class="form-control w-25 mx-auto my-5"
+      placeholder="search..."
+      onkeyup="search();"
+    />
+
+    <table class="w-75 table-striped text-center">
+      <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>category</th>
+        <th>price</th>
+        <th>description</th>
+        <th>delete</th>
+        <th>update</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/crud.js"></script>
+  </body>
+</html>
